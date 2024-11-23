@@ -1,0 +1,9 @@
+{
+	"owner": "alexeev-pkg",
+	"name": "carbon_pkg",
+	"description": "Blazing fast and modern package manager written in Golang",
+	"version": "latest",
+	"languages": ["go"],
+	"license": "GNU LGPL v2.1",
+
+}
