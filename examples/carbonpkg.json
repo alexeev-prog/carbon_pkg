@@ -5,5 +5,25 @@
 	"version": "latest",
 	"languages": ["go"],
 	"license": "GNU LGPL v2.1",
+	"repository": "https://github.com/alexeev-prog/carbon_pkg",
 
+	"raw_source": {
+		"type": "git",
+		"url": "{repository}.git",
+		"branch": "main"
+	},
+
+	"assets": { 
+		"type": "tar-archive",
+		"commands": ["tar -xf {file}"],
+		"path": "{repository}/releases/download/{version}",
+
+		"files": {
+			"linux-amd64": "carbonpkg-{version}-linux-amd64.tar.gz"
+		}
+	},
+
+	"checksums": {
+		"sha256": "checksums.txt"
+	}
 }
