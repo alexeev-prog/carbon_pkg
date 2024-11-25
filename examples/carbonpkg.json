@@ -1,11 +1,17 @@
 {
 	"owner": "alexeev-pkg",
 	"name": "carbon_pkg",
+	"package_type": "binary",
 	"description": "Blazing fast and modern package manager written in Golang",
+	"maintainer": "Alexeev Bronislav <alexeev.dev@mail.ru>"
+	"tags": ["package manager", "package", "golang", "fast"]
 	"version": "latest",
 	"languages": ["go"],
+	"supported_architectures": ["amd64", "arm"],
 	"license": "GNU LGPL v2.1",
 	"repository": "https://github.com/alexeev-prog/carbon_pkg",
+	"homepage": "https://github.com/alexeev-prog/carbon_pkg",
+	"user-configurable": true,
 
 	"raw_source": {
 		"type": "git",
@@ -13,17 +19,21 @@
 		"branch": "main"
 	},
 
-	"assets": { 
-		"type": "tar-archive",
-		"commands": ["tar -xf {file}"],
-		"path": "{repository}/releases/download/{version}",
+	"assets": {
+		"default": "github-release",
+		"github-release": {
+			"path": "{repository}/releases/download/{version}",
 
-		"files": {
-			"linux-amd64": "carbonpkg-{version}-linux-amd64.tar.gz"
+			"files": {
+				"linux-amd64": "carbonpkg-{version}-linux-amd64.tar.gz"
+			}
+
+			"checksums": "checksums.txt"
+		},
+		"building": {
+			"commands": [],
+			"output_files": [],
+			"building_instructions_file": "BUILDING.md"
 		}
 	},
-
-	"checksums": {
-		"sha256": "checksums.txt"
-	}
 }

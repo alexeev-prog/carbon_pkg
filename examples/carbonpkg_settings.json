@@ -1,0 +1,15 @@
+{
+	"install_monoxide": false,
+	"always_skip_trp": false,
+	"timeout": 30,
+	"security" {
+		"verify_checksums": true,
+	},
+	"install": {
+		"install_location": "/usr/local/bin"
+	},
+	"backup": {
+		"enabled": true,
+		"backup_location": "~/.carbon_pkg_backups"
+	}
+}
